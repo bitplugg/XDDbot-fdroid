@@ -1,0 +1,16 @@
+# fdroidserver configuration for the self-hosted XDDBOT repository.
+# Docs: https://f-droid.org/docs/Setup_an_F-Droid_App_Repo/
+#
+# This file intentionally contains no secrets. Provide the keystore and its
+# passwords via environment variables or the command line:
+#   export FDROID_KEYSTORE=/path/to/keystore.jks
+#   export FDROID_KEYPASS=...
+repo_url: https://bitplugg.github.io/XDDbot-fdroid/repo
+repo_name: XDDBOT
+repo_icon: icons/xdbot.bitplugg.ru.png
+repo_description: |-
+    XDDBOT — BLE-компаньон для вашего собственного электросамоката.
+archive_older: 0
+keystore: keystore.jks
+repo_keyalias: xddbot
+keydname: CN=bitplugg, OU=XDDBOT, O=XDDbot, L=Moscow, ST=Moscow, C=RU

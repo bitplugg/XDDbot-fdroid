@@ -1,0 +1,10 @@
+# Build output and secrets — never commit these.
+repo/
+metadata/*.json
+*.apk
+*.idsig
+keystore.jks
+keystore.p12
+storepass.txt
+keypass.txt
+/tmp/

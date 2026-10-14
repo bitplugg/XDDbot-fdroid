@@ -1,0 +1,49 @@
+Categories:
+  - Sports & Health
+License: MIT
+AuthorName: bitplugg
+AuthorWebSite: https://bitplugg.github.io/XDDbot/
+WebSite: https://bitplugg.github.io/XDDbot/
+SourceCode: https://github.com/bitplugg/XDDbot
+IssueTracker: https://github.com/bitplugg/XDDbot/issues
+Changelog: https://github.com/bitplugg/XDDbot/blob/main/CHANGELOG.md
+
+AutoName: XDDBOT
+
+Summary: BLE-компаньон для вашего собственного электросамоката
+Description: |-
+    XDDBOT — открытый клиент-компаньон для вашего собственного
+    электросамоката: подключение по BLE, диагностика, команды
+    (открыть/закрыть, поиск, звук), работа с вашим ключом устройства.
+
+    Приложение не генерирует и не подбирает ключи. Оно хранит только те
+    ключи, которые вы вводите вручную, и передаёт их лишь подключённому
+    вами самокату при рукопожатии. Ключи лежат на устройстве в
+    зашифрованном виде.
+
+    Есть демо-режим для проверки интерфейса без железа. Телеметрия
+    выключена по умолчанию; её можно включить вручную в настройках.
+
+    Интерфейс: русский и английский. Material You (Android 12+).
+
+RepoType: git
+Repo: https://github.com/bitplugg/XDDbot.git
+
+Builds:
+  - versionName: 0.1.0
+    versionCode: 1
+    commit: 34fd593d171484a05a6029e29f372112b8842338
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i '/include(":baselineprofile")/d' settings.gradle.kts
+      - sed -i '/alias(libs.plugins.androidx.baselineprofile)/d' app/build.gradle.kts
+      - rm -rf baselineprofile
+    rm:
+      - worker
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.1.0
+CurrentVersionCode: 1
