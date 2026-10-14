@@ -30,9 +30,9 @@ RepoType: git
 Repo: https://github.com/bitplugg/XDDbot.git
 
 Builds:
-  - versionName: 0.1.0
-    versionCode: 1
-    commit: 34fd593d171484a05a6029e29f372112b8842338
+  - versionName: 0.0.1
+    versionCode: 13
+    commit: v0.0.1
     subdir: app
     gradle:
       - yes
@@ -45,5 +45,5 @@ Builds:
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.1.0
-CurrentVersionCode: 1
+CurrentVersion: 0.0.1
+CurrentVersionCode: 13
